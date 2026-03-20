@@ -3872,13 +3872,26 @@ input, select, textarea {
 
 /* Intro */
 
-	#intro {
-		background-attachment: fixed;
-		background-image: url("images/intro.svg");
-		background-position: top right;
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-	}
+#intro {
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 修改這裡：從 cover 改成 contain */
+    background-size: contain;
+}
+
+#intro .inner {
+    padding: 2em;
+    border-radius: 1em;
+    display: inline-block; /* 讓底色寬度隨文字長度調整 */
+}
+
+		#intro h1, #intro p {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* 加上深色發散陰影 */
+            color: #ffffff !important; /* 強制確保文字是純白色 */
+        }
+
 
 		#intro p {
 			font-size: 1.25em;
@@ -3907,3 +3920,4 @@ input, select, textarea {
 			}
 
 		}
+
