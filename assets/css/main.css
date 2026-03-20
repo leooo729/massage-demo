@@ -3921,3 +3921,85 @@ input, select, textarea {
 
 		}
 
+
+/* 高級感優化：字體與色彩重塑 */
+body, input, select, textarea {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300; /* 使用細體字更顯精緻 */
+}
+
+h1, h2, h3 {
+    font-family: 'Noto Serif TC', serif;
+    letter-spacing: 0.1em;
+    color: #d4af37 !important; /* 精品金色 */
+}
+
+/* 1. 首頁優化：去除黑框，改用高質感毛玻璃 */
+#intro {
+    background-size: cover !important; /* 回歸 cover，讓照片撐滿 */
+    background-position: center 20% !important;
+}
+
+#intro .inner {
+    background: rgba(0, 0, 0, 0.4); /* 極淡遮罩 */
+    backdrop-filter: blur(8px);    /* 毛玻璃效果 */
+    padding: 3em;
+    border-left: 4px solid #d4af37; /* 左側金邊 */
+    border-radius: 0;
+}
+
+/* 移除原本的黑框 text-shadow，改用細微陰影 */
+#intro h1, #intro p {
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    color: #ffffff !important;
+}
+
+/* 2. 配色調整：從「電子紫色」轉為「沉穩炭灰」 */
+#sidebar { background: #1a1a1a; }
+#sidebar nav a:after { background: #d4af37; } /* 導覽列金邊 */
+#sidebar nav a.active { color: #d4af37; }
+
+.wrapper.style1 { background-color: #1a1a1a; } /* 深色背景 */
+.wrapper.style2 { background-color: #262626; } /* 稍淺炭灰 */
+.wrapper.style3 { background-color: #1f1f1f; } /* 中性灰色 */
+
+/* 3. 按鈕優化 */
+.button.primary {
+    background-color: #d4af37 !important;
+    color: #ffffff !important;
+    border: none !important;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* 4. 人物介紹區塊優化 */
+.features section {
+    border-color: rgba(212, 175, 55, 0.2) !important;
+}
+
+.features .icon {
+    color: #d4af37 !important;
+}
+
+/* 讓預約區塊內容居中，更有 Call to Action 的感覺 */
+#three .inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6em;  /* 增加頂部間距 */
+    padding-bottom: 6em; /* 增加底部間距 */
+}
+
+#three h2 {
+    margin-bottom: 1em;
+}
+
+#three ul.actions {
+    justify-content: center;
+    margin-top: 2em;
+}
